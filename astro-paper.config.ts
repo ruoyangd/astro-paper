@@ -8,7 +8,7 @@ export default defineAstroPaperConfig({
     author: "半舍",
     profile: "https://ruoyang.uk/",
     ogImage: "default-og.jpg",
-    lang: "zh",
+    lang: "en",
     timezone: "Asia/Shanghai",
     dir: "ltr",
   },
