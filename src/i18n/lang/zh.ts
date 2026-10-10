@@ -6,7 +6,7 @@ export default {
     posts: "文章",
     tags: "标签",
     about: "关于",
-    archives: "归档",
+    archives: "朋友圈",
     search: "搜索",
   },
   post: {
@@ -47,7 +47,7 @@ export default {
     postsTitle: "文章",
     postsDesc: "我发布的所有文章。",
 
-    archivesTitle: "归档",
+    archivesTitle: "朋友圈",
     archivesDesc: "我归档的所有文章。",
 
     searchTitle: "搜索",
