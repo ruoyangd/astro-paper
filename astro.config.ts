@@ -19,6 +19,7 @@ import {
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import config from "./astro-paper.config";
 
+
 export default defineConfig({
   site: config.site.url,
   integrations: [
@@ -29,8 +30,8 @@ export default defineConfig({
     }),
   ],
   i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
+    locales: ["zh"],
+    defaultLocale: "zh",
     routing: {
       prefixDefaultLocale: false,
     },
@@ -60,25 +61,12 @@ export default defineConfig({
   },
   fonts: [
     {
-      name: "Google Sans Code",
-      cssVariable: "--font-google-sans-code",
-      provider: fontProviders.google(),
-      fallbacks: ["monospace"],
-      weights: [300, 400, 500, 600, 700],
-      styles: ["normal", "italic"],
-      formats: ["woff", "ttf"],
+      name: "Inter",
+      src: "local(Inter)",
+      style: "normal",
     },
   ],
-  env: {
-    schema: {
-      PUBLIC_GOOGLE_SITE_VERIFICATION: envField.string({
-        access: "public",
-        context: "client",
-        optional: true,
-      }),
-    },
-  },
-  experimental: {
-    svgOptimizer: svgoOptimizer(),
+  security: {
+    checkOrigin: false,
   },
 });
