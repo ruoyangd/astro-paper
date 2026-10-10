@@ -19,7 +19,6 @@ import {
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import config from "./astro-paper.config";
 
-
 export default defineConfig({
   site: config.site.url,
   integrations: [
@@ -58,6 +57,15 @@ export default defineConfig({
   },
   vite: {
     plugins: [tailwindcss()],
+  },
+  env: {
+    schema: {
+      PUBLIC_GOOGLE_SITE_VERIFICATION: envField.string({
+        access: "public",
+        context: "client",
+        optional: true,
+      }),
+    },
   },
   security: {
     checkOrigin: false,
