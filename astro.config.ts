@@ -59,13 +59,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  fonts: [
-    {
-      name: "Inter",
-      src: "local(Inter)",
-      style: "normal",
-    },
-  ],
   security: {
     checkOrigin: false,
   },
